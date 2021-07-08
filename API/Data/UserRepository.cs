@@ -21,6 +21,11 @@ namespace API.Data
             _context = context;
         }
 
+        public Task<MemberDto> GetMemberAsync(string username)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public async Task<MemberDto> GetMemberAync(string username)
         {
             return await _context.Users
@@ -63,6 +68,11 @@ namespace API.Data
         public void Upadate(AppUser user)
         {
             _context.Entry(user).State = EntityState.Modified;
+        }
+
+        public void Update(AppUser user)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
